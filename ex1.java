@@ -7,13 +7,17 @@ public class ex1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите дробное число: ");
-        float num;
-        try {
-            num = scan.nextFloat();
-            System.out.printf("Ваше число: %f \n", num);
-            scan.close();
-        } catch (Exception e) {
-            System.out.println("Введите дробное число: ");
+        float num = 0;
+        boolean flag = false;
+        while (flag==false)
+            try {
+                num = scan.nextFloat();
+                System.out.printf("Ваше число: %f \n", num);
+                flag=true;
+                scan.close();
+            } catch (Exception e) {
+                System.out.println("Введите дробное число: ");
+                break;
+            }
         }
-    }
 }
