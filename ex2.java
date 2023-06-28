@@ -1,3 +1,5 @@
+//Если необходимо, исправьте данный код (задание 2)
+
 public class ex2 {
     public static void main(String[] args) {
         int [] intArray = new int []{0,1,2,3,4,5,6,7,8};
