@@ -5,19 +5,18 @@ import java.util.Scanner;
 вместо этого, необходимо повторно запросить у пользователя ввод данных. */
 public class ex1 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите дробное число: ");
         float num = 0;
         boolean flag = false;
-        while (flag==false)
+        while (!flag) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Введите дробное число: ");
             try {
                 num = scan.nextFloat();
                 System.out.printf("Ваше число: %f \n", num);
-                flag=true;
+                flag = true;
                 scan.close();
             } catch (Exception e) {
-                System.out.println("Введите дробное число: ");
-                break;
             }
         }
+    }
 }
